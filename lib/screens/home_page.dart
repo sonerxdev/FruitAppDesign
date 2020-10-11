@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:fruits_app/core/context_extension.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -219,10 +220,8 @@ class _HomePageState extends State<HomePage> {
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => Card(
-          
           semanticContainer: true,
           clipBehavior: Clip.antiAliasWithSaveLayer,
-          
           child: Container(
             height: 400.0,
             width: 130.0,
@@ -284,7 +283,7 @@ class _HomePageState extends State<HomePage> {
         Container(
           margin: EdgeInsets.symmetric(horizontal: 60.0),
           child: RaisedButton(
-            color:  Color(0xffb8e3fa),
+            color: Color(0xffb8e3fa),
             child: Icon(
               Icons.search,
               color: Colors.white,
@@ -341,13 +340,13 @@ class _HomePageState extends State<HomePage> {
 
   AppBar a1() {
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       elevation: 0.0,
       bottomOpacity: 0.0,
       leading: Container(
         margin: EdgeInsets.all(10.0),
-        height: 21.0,
-        width: 21.0,
+        height: context.dynamicHeight(0.1),
+        width: context.dynamicWidth(0.1),
         decoration: BoxDecoration(
           color: Colors.grey[200],
           borderRadius: BorderRadius.circular(10.0),
