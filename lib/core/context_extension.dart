@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-extension ContexExtension on BuildContext {
+extension ContextExtension on BuildContext {
   double dynamicWidth(double val) => MediaQuery.of(this).size.width * val;
   double dynamicHeight(double val) => MediaQuery.of(this).size.height * val;
 
@@ -8,5 +8,5 @@ extension ContexExtension on BuildContext {
 }
 
 extension PaddingExtension on BuildContext {
-  EdgeInsets get paddingAllLow => EdgeInsets.all(dynamicHeight(0.01));
+  EdgeInsets get paddingAllLow => EdgeInsets.all(dynamicHeight(0.02));
 }

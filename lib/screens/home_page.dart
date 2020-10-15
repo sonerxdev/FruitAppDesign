@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fruits_app/core/context_extension.dart';
 
+//scroll olan sayfalarda singlechildscrollview içine container yaparsan expanded hata vermeyecektir.
+//body: singlechildscrollview/listview>Container/SizedBox>Column or Row
+//Her elementi Container ile sarmalayabilirsin.
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
